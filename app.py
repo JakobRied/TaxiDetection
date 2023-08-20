@@ -14,13 +14,15 @@ state = "unset"
 
 @app.route("/")
 def index():
-    print("Loading Homepage")
     return render_template("mobileIndex.html")
+
+@app.route("/report")
+def report():
+    return render_template("report.html")
 
 @app.route('/process_frame', methods=['POST'])
 def process_frame():
     global filename
-    print("Processing Frame")
     try:
         data = request.get_json()
         image_data = data.get('image_data', '')
@@ -79,9 +81,5 @@ def result(filename):
     if valid:
         return render_template("mobile-valid.html", number=number)
     
-    return render_template("invalid.html", filename=filenameEdited, number=number)
+    return render_template("mobile-invalid.html", filename=filenameEdited, number=number)
     
-
-if __name__=="__main__":
-    context = ('cert.pem', 'key.pem') #Location of certificate & key
-    app.run(port=5000, ssl_context=context, host='0.0.0.0', debug=True) #Specify variable to run function
