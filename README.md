@@ -31,15 +31,14 @@ Its primary goal is to detect, extract, and verify taxi numbers against an offic
 - Collected and labeled **250+ images** of Namibian taxis.  
 - Each image was **manually annotated** to mark the position of the taxi registration number.  
 - The dataset was used to train the YOLO model for high-accuracy number detection.
-- 
 
-## 🧑‍💻 User Interface
+## User Interface
 
 The frontend was intentionally kept **minimalistic** and **functional**, as the primary focus of the project was on training and implementing the YOLO model rather than frontend design.
 
 ---
 
-## 📚 Acknowledgements
+## Acknowledgements
 
 - [Harvard CS50](https://cs50.harvard.edu/) for the foundational knowledge and inspiration  
 - Open-source contributors for YOLO and supporting libraries
